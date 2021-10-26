@@ -1,1 +1,1 @@
-# https://developer-kawsar.github.io/myapp/
+# https://developerub.io/myapp/
