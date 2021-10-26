@@ -19,6 +19,46 @@
    
    
  }
+ 
+ .form{
+  margin-top: 100px;
+  background: #EBEDFF;
+  
+ 
+  top: 100px;
+  margin: auto;
+ 
+  width: 90%;
+}
+input,textarea{
+  padding: 10px;
+  border: none;
+  background: white;
+  border-radius: 4px;
+  outline: 0;
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  border: 1px solid #FF8FE4;
+  
+  
+}
+textarea{
+  height: 200px;
+  padding: 10px;
+}
+button{
+  border: none;
+  padding: 1rem 2rem;
+  background: #FF8FE4;
+  display: block;
+  width: 100%;
+  margin-top: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
     </style>
     <link rel="stylesheet" href="css/dropdown.css"> 
     
@@ -84,10 +124,21 @@
                    আপনাদের পরামর্শ, অভিযোগ, মতামতই আমার এগিয়ে যাওয়ার অনুপ্রেরণা। 
                  </p> 
 
-                 <div style="margin: auto; width: 95%;">
-                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2XGZGogSqA4zb3fOFmDOJTsRPGs-PQzoyJUvxCEiDjA8ZNA/viewform?embedded=true" 
-                  width="320" height="788" frameborder="0"
-                  marginheight="0" marginwidth="0">Loading…</iframe>
+                 <div style="margin: auto; width: 99%;">
+    <div class="form">
+
+   <form class="" method="POST" action="https://formspree.io/f/xleavnee" method="get" accept-charset="utf-8" onsubmit="return hello()">
+<div class="input-box">
+       <input type="text" name="name" id="input" value="" placeholder="name" />
+       <input type="email" name="email" id="input2" value="" placeholder="Email" />
+       <textarea name="" id= rows="80" cols="80" placeholder="Write here ......."></textarea>
+</div>
+  
+     <button type="submit">Send Message</button>
+   </form>
+ </div>
+
+
                  </div>
                  
               </div>
