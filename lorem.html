@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="css/colors.css"> 
+<link rel="stylesheet" href="css/dropdown.css">
+    <title>Lorem text generator </title>
+    
+    <style type="text/css" media="all">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+      header{
+        width: 100%;
+      }
+      .container{
+        padding: 10px;
+        width: 90%;
+        background-color: #eee;
+        margin: auto;
+        max-width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .buttons{
+        display: flex;
+        align-items: center;
+        
+        padding: 4px;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0px;
+        
+        
+      }
+      button{
+       border: none;
+       background-image: linear-gradient(to right,#ff9966,#ff5e62);
+       padding: 10px 20px;
+       margin: 0 5px;
+       color: white;
+      font-weight: bold;
+      cursor: pointer;
+        
+      }
+      
+      .text-box{
+        flex: 1;
+        background-color: white;
+        padding: 30px;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+        min-height: 100vh;
+      }
+      
+      
+      /* slider */
+      .slidecontainer{
+        width: 100%;
+        margin-top: 20px;
+      }
+      
+      .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.value{
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 50px;
+}
+    </style>
+</head>
+<body>
+   
+
+  <div class="top-nav">
+            
+    <div class="dropdown" style="margin: auto;"> 
+      <!-- button -->
+         <div class="humberger dropbtn">
+           <div class="bar"></div>
+         </div>
+         <!-- content  -->
+
+         <div class="dropdown-content">
+           <a href="lorem2.html">Home</a>
+           <a href="colors.html">Colors</a>
+           <a href="box-shadow.html">Box Shadow</a>
+           <a href="linear-color.html">Gradient</a>
+           <a href="lorem.html"> Lorem Text </a>
+           <a href="cdns.html"> cdn links </a>
+           <a href="about-us.html"> About Us</a>
+         </div>
+
+
+    </div> 
+  </div>
+  
+  
+  <header style="min-height: 100vh; margin-top: 50px;"> 
+       
+
+     
+    <div class="container">  
+	  <br>
+	  <h4 style="padding-top:"300px"> Lorem text generator </h4>
+         <div class="slidecontainer">
+           <input type="range" min="1" max="300" value="5" class="slider" id="myRange">
+         </div> 
+         <p class="value" id="slider__val"> Value</p>
+         <div class="buttons">
+           
+         
+             <button type="submit"  id="btn" data-clipboard-target="#demo">Copy</button>
+             
+           </div>
+           <div class="text-box">
+             <p id="demo"></p>
+           </div>
+    </div>
+    
+  </header>
+ 
+  <p class="demo">
+   
+  </p>
+  <script src="clipboard/dist/clipboard.min.js" type="text/javascript" charset="utf-8"></script> 
+     
+
+   
+
+    
+    <script> 
+
+        var mybtn=document.getElementById("btn")
+        var clipboard = new ClipboardJS(mybtn);
+        
+      
+
+          
+          
+
+mybtn.addEventListener('click',function(){
+
+  
+  const my=this.innerHTML;    
+    const color=this.style.color="white"
+    
+    setTimeout(() => {
+            this.innerHTML=my;
+             this.style.color=color;
+        
+            
+            
+        }, 1000);
+        this.innerHTML="Copied";
+        this.style.color="green"
+        
+      
+          
+        
+})
+
+
+   
+  // generate by letter
+     var p=document.querySelector('p')
+     var input=document.querySelector('input')
+     function generateLetter(){
+         var val=Number(input.value);
+         var cutstr=longstr.slice(0,val+1)
+        p.innerHTML=cutstr;
+            
+     }
+     
+     
+
+    //  generate by alphabate
+    //   Its not a completed  function 
+    //  function generateWord(){
+    //      var val=Number(input.value);
+    //      var strArr=longstr.split(' ');
+    //     // 
+    //      p.innerHTML=strArr.length;
+    //  }
+
+    //  var str=" asadklfoa flfjofi ajioasf  ";
+    //  console.log(str.length);
+    //  let str2 ="apple, Banana, Kiwi";
+    //  console.log(str2.substr(7));
+
+
+
+     var longstr=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,  quisLorem ipsum dolor sit amet consectetur   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo facere non quia totam dicta quo aperiam exercitationem corrupti consectetur fuga, tenetur ullam modi ad ex explicabo odio autem provident voluptatum enim dolore ut soluta placeat. Dolore laboriosam ducimus voluptate tenetur aliquid doloribus blanditiis nisi. Nam, porro quod odit atque omnis nisi nesciunt, labore, sed vel quos a sapiente mollitia doloremque. Perferendis soluta voluptas ullam eius aspernatur qui! Repellendus exercitationem cupiditate atque aut nam ratione eveniet alias consequatur earum tenetur veritatis culpa vero amet laboriosam tempore dicta quia, corporis perferendis perspiciatis, molestiae deserunt provident. Nisi deleniti dicta vel magni amet cumque numquam, ullam officia quas beatae fugit molestiae cum suscipit dolorum fuga quos eveniet architecto blanditiis iusto quisquam ad odit voluptas! Tempore voluptatem obcaecati optio iusto beatae odio earum modi repudiandae, aliquam perferendis? Perspiciatis mollitia suscipit quas dignissimos provident nam necessitatibus exercitationem nobis eaque pariatur expedita recusandae amet eos similique totam culpa eum veniam doloremque omnis praesentium, est minus veritatis. Nesciunt tenetur facere consequuntur eos dolor accusantium sunt aut maiores ea repellat amet nostrum quibusdam cumque, ducimus labore illo vero doloribus atque quia, error adipisci cupiditate inventore recusandae. Asperiores, beatae quia ea omnis temporibus molestias consequatur minima deserunt praesentium quibusdam saepe explicabo quos adipisci qui odit! Tempora iste iusto ipsam qui corporis doloremque, veritatis magnam aperiam iure est enim eaque corrupti consequatur necessitatibus atque sit, sint recusandae? Non quam suscipit nemo officiis unde facilis ullam excepturi error. Dignissimos aut, accusantium nihil, ducimus mollitia libero, facilis corrupti doloremque voluptas magnam voluptate numquam eum? Libero sit omnis eius sunt reprehenderit commodi sint incidunt nisi rem ipsum qui, facere, ullam laudantium obcaecati cupiditate exercitationem doloremque. Quibusdam, mollitia? Dolor, error enim quae itaque nisi sapiente vero suscipit iusto, doloribus in aspernatur provident veniam fugiat facilis at unde, accusamus est? Suscipit assumenda, dolore omnis explicabo, accusamus in fuga autem minus ipsum alias dignissimos ipsam dicta nostrum vel velit, at officiis quam voluptate. Impedit aliquid minus laboriosam dolores distinctio! Explicabo, dolorem fuga. Quas, iusto eius nisi velit aut, quod cumque temporibus vero architecto doloribus nobis, placeat pariatur nulla atque obcaecati odio. Illum aspernatur eaque expedita, blanditiis debitis dolores fugiat aut eius maxime vitae enim, sed magni ea rerum doloribus ullam provident veniam repellat, voluptatibus commodi qui beatae facilis. Nemo commodi similique, optio nulla sed quod modi esse consequuntur accusantium iste tempora distinctio natus perspiciatis libero dicta cupiditate eaque. Incidunt aliquid eum ipsum voluptatem nulla eveniet doloremque maxime dicta, molestiae architecto alias qui consectetur dolores officia expedita magnam, accusantium quod autem sed quo maiores. Harum dolores nisi, quos iusto itaque enim vitae! Animi quod impedit nam corporis reprehenderit, vel dicta ipsum, pariatur ut quis nobis quam asperiores laudantium numquam quibusdam iste, delectus suscipit velit quos beatae nesciunt aspernatur assumenda alias? Nisi sit quos tempore exercitationem impedit ab assumenda animi dolore, quae corrupti aut nostrum illo, velit architecto, non fugiat delectus ut eum? Reiciendis placeat necessitatibus reprehenderit porro, dignissimos eum est cumque quidem facilis qui iste sint hic odit saepe quo praesentium excepturi itaque, voluptates eius libero magnam explicabo enim aliquam? Modi provident cum corrupti accusamus fuga mollitia esse? Magnam magni esse possimus dolor, assumenda voluptatum sapiente consectetur explicabo enim laudantium at quis quae corporis, tempora totam est pariatur. Quos aliquid inventore expedita corrupti qui quas obcaecati, aut quo suscipit numquam sit iusto tempore nobis architecto soluta doloremque repellendus impedit a nostrum repudiandae id blanditiis. Earum itaque odio explicabo aut facilis facere pariatur, officia deleniti deserunt vero accusamus culpa numquam, iure reiciendis eos eveniet hic quidem! Inventore enim hic asperiores ipsam sequi et rem, dolorum expedita amet id fuga perferendis quo omnis. Aliquam modi incidunt laborum corrupti ut aspernatur optio, iure soluta qui laudantium facilis quis doloribus rerum ducimus, vitae consequuntur ipsa mollitia natus? Perferendis quisquam reprehenderit alias ab vitae voluptatum impedit, labore minus sit explicabo sed, quas minima laudantium vel aliquid rerum deserunt fugiat, quod id itaque facere! Maiores sit sapiente, reiciendis totam inventore excepturi dignissimos temporibus quos corporis. Nemo esse alias omnis minus facilis praesentium quae, excepturi natus recusandae labore facere pariatur commodi similique eos officia aspernatur maxime perferendis modi laudantium unde fugiat nulla! Rem eligendi ratione facere culpa officiis vitae ad numquam perspiciatis ducimus tempore. Consectetur nemo possimus cupiditate blanditiis deleniti impedit, amet doloribus ut unde labore voluptate veritatis quidem quod molestias sit quis voluptatem, vel tempora rerum ipsum in dicta cum quia nulla? Ipsum officia repudiandae quis a voluptate obcaecati nemo nam cumque porro voluptas esse, totam minus quaerat distinctio explicabo veniam repellendus ipsa harum quo fugit. Pariatur mollitia fugiat error inventore velit, quibusdam tempora laborum repellat delectus unde culpa, amet fugit odio cupiditate! Molestias explicabo ipsam soluta eaque inventore neque beatae in qui repellendus velit accusantium adipisci expedita mollitia earum fugit, quis voluptate? Quis, expedita labore ducimus fuga voluptatibus obcaecati culpa facilis deserunt rem dolorum omnis saepe alias fugit dicta illum explicabo illo eos ut exercitationem distinctio quae. Consectetur, laboriosam repellendus placeat accusamus sint aliquam asperiores sapiente reiciendis sit tenetur aspernatur, impedit possimus, assumenda incidunt. Libero laborum ipsa dolorum eveniet praesentium dolorem officiis, numquam consequuntur. Sit voluptate eligendi consequuntur expedita odit corporis delectus iste cum blanditiis non porro, itaque optio animi et veritatis quasi dolores mollitia recusandae consequatur dolor natus minus aperiam quisquam! Accusantium quas magnam porro. Neque ad aut laborum nam cupiditate assumenda quasi dolores qui vitae repellendus doloribus, voluptas autem dolorum quisquam eaque quaerat facere iusto explicabo, ratione voluptates unde consequuntur ullam illo? Reprehenderit culpa eaque officiis accusamus corrupti qui explicabo ipsam error magnam placeat omnis, sapiente libero. In, natus. Sapiente debitis esse temporibus omnis nam deleniti fugit rem porro, distinctio ex est earum dignissimos cumque repellat officiis nisi magni. Culpa ipsum, cum dolorum pariatur tenetur, accusamus corporis eaque unde ab sint quod quae aliquid ex? Numquam, accusamus aliquid amet quia natus accusantium, sapiente doloremque odit, sunt facilis corrupti laborum iure nulla! Reprehenderit inventore unde atque neque quam, tempora quisquam! Nemo similique sequi exercitationem delectus! Vero iste iure accusamus inventore expedita exercitationem eius non tempora sequi ea delectus quasi dolorem eligendi ducimus asperiores distinctio, nulla enim quos deserunt? Iusto facilis rerum tempore?";
+
+
+
+
+
+
+
+
+
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+var slider__val=document.getElementById("slider__val")
+slider__val.innerHTML=slider.value;
+// output.innerHTML = slider.value;
+ // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+ slider__val.innerHTML=this.value
+  var cutstr=longstr.split(" ",this.value)
+  cutstr=cutstr.join(" ")
+ // output.innerHTML = this.value;
+ output.innerHTML=cutstr
+}
+
+
+    </script>
+</body>
+</html>

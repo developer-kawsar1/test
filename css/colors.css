@@ -1,0 +1,213 @@
+@font-face {
+    font-family: hind;
+    src: url(Hind_Siliguri/HindSiliguri-Light.ttf);
+  }
+  body{
+    font-family:hind;
+    
+  }
+  
+  
+  
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+       .header{
+         min-height: 10vh;
+         width: 100%;
+         background: white;
+         color: red;
+         
+         
+       }
+       nav{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding:10px 30px;
+         background:white;
+         box-shadow: 0 0 20px 0 #ccc;
+         position:fixed;
+         top:0;
+         width:100%;
+       }
+       h4{
+         font-size: 20px;
+       }
+       nav h4 a{
+         color: green;
+         text-decoration: none;
+         font-weight: bold;
+       }
+       span{
+         color:red;
+       }
+      .nav-links{
+        flex: 1;
+        text-align: right;
+      }
+      ul{
+        list-style-type: none;
+      }
+      ul li{
+        display: inline-block;
+        
+      }
+      ul li a{
+        padding: 10px 5px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        color: #149074;
+      }
+      
+     .boxes{
+       background: #fff;
+       
+       
+       padding: 10%;
+       
+       
+       display:grid;
+       justify-content: center;
+       
+       grid-template-columns: 22% 22% 22% 22%;
+       grid-column-gap: 3rem;
+       grid-row-gap: 3rem;
+       
+     }
+       .box{
+        
+        background:#fff;
+        min-height: 200px;
+        
+        border-radius: 5px;
+       flex-basis: 20%;
+       text-align: center;
+       
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 25px;
+       font-weight: bold;
+       }
+  
+       .box0{background-color: #E5FDFC;}
+       .box1{background-color: #F6EDFF;}
+       .box2{ background-color: #D9EBF7;}
+       .box3{ background-color: #DAFFEA ;}
+       .box4{ background-color:#F2FBFC;}
+       .box5{ background-color: #Eaf4fc;}
+       .box6{ background-color: #5F9F9F;}
+       .box7{ background-color: #507786;}
+       .box8{ background-color:#E8EAF6;}
+       .box9{ background-color: #ffeeee ;}
+       .box10{ background-color:#ffeef8;}
+       .box11{ background-color:#fbeeff;}
+       .box12{ background-color: #eef1ff ;}
+       .box13{ background-color: #eefcff ;}
+       .box14{ background-color: #eefff8;}
+       .box15{ background-color: #eeffee;}
+       .box16{ background-color: #fcffee;}
+       .box17{ background-color: #fffaee ;}
+       .box18{ background-color:#fff5ee;}
+       .box19{ background-color: #F0FFFF;}
+       .box20{ background-color:#DCDCDC ;}
+       .box21{ background-color: #F8F8FF;}
+       .box22{ background-color:#F0FFF0;}
+       .box23{ background-color: #708090 ;}
+       .box24{ background-color: #6F7285;}
+       .box25{ background-color: #7A7A7A ;}
+       .box26{ background-color: #555 ;}
+       .box27{ background-color: #242526;}
+       .box28{ background-color:#ccc;}
+     
+
+
+      
+         /*-------------------------
+        Large Device
+    -------------------------*/
+         @media (min-width: 992px) and (max-width: 1199px) {
+    
+           .boxes {
+             grid-template-columns: 22% 22% 22% 22%;
+            
+    
+           }
+    
+         }
+    
+         /*-------------------------
+    Medium Device
+    -------------------------*/
+         @media (min-width: 600px) and (max-width: 991px) {
+    
+           .boxes {
+             grid-template-columns: 30% 30% 30%;
+            
+    
+           }
+    
+    
+         }
+    
+         /*-------------------------
+    small tab
+    -------------------------*/
+         @media (min-width: 600px) and (max-width: 767px) {
+           
+           .boxes {
+             grid-template-columns: 48% 48%;
+             
+           }
+    
+         }
+      
+
+         @media (max-width:600px)  {
+          .boxes{
+          grid-template-columns: 48% 48%;
+          grid-column-gap: 2rem;
+          grid-row-gap: 2rem;
+          
+          margin-top: 30px;
+          
+          
+          }   
+
+          .box{
+            font-size: 15px;
+          }
+          
+          }
+          
+          /*-------------------------
+          Extra small Device 
+          -------------------------*/
+          @media (max-width:300px)  {
+          .boxes{
+          grid-template-columns: 80% ;
+          grid-column-gap: 2rem;
+          grid-row-gap: 2rem;
+          
+          margin-top: 30px;
+          
+          
+          }   
+
+          nav{
+            padding: 10px 10px;
+          }
+           nav h4{
+             font-size: 15px;
+           }
+          .nav-links ul li a{
+            font-size: 10px;
+            padding: 0;
+          }
+          
+          }

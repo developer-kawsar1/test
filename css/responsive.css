@@ -1,0 +1,36 @@
+     /*-------------------------
+    Large Device
+-------------------------*/
+     @media (min-width: 992px) and (max-width: 1199px) {
+
+       .boxes {
+         grid-template-columns: 22% 22% 22% 22%;
+
+       }
+
+     }
+
+     /*-------------------------
+Medium Device
+-------------------------*/
+     @media (min-width: 600px) and (max-width: 991px) {
+
+       .boxes {
+         grid-template-columns: 30% 30% 30%;
+
+       }
+
+
+     }
+
+     /*-------------------------
+small tab
+-------------------------*/
+     @media (min-width: 600px) and (max-width: 767px) {
+
+       .boxes {
+         grid-template-columns: 48% 48%;
+
+       }
+
+     }

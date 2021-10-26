@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/colors.css" type="text/css" media="all" /> 
+    <link rel="stylesheet" href="css/dropdown.css">
+    
+  
+</head>
+
+<body>
+  <div class="top-nav">
+            
+    <div class="dropdown" style="margin: auto;"> 
+      <!-- button -->
+         <div class="humberger dropbtn">
+           <div class="bar"></div>
+         </div>
+         <!-- content  -->
+
+         <div class="dropdown-content">
+           <a href="lorem2.html">Home</a>
+           <a href="colors.html">Colors</a>
+           <a href="box-shadow.html">Box Shadow</a>
+           <a href="linear-color.html">Gradient</a>
+           <a href="lorem.html"> Lorem Text </a>
+           <a href="cdns.html"> cdn links </a>
+           <a href="about-us.html"> About Us</a>
+         </div>
+
+
+    </div> 
+  </div>
+  <section style="min-height:100vh;">
+       
+    <div  class="boxes">
+      <div class="box box0" data-clipboard-text="#fffff"> #ffffff </div>
+      <div class="box box1" data-clipboard-text="#F6EDFF"> #F6EDFF </div>
+      <div class="box box2" data-clipboard-text="#D9EBF7"> #D9EBF7 </div>
+      <div class="box box3" data-clipboard-text="#DAFFEA"> #DAFFEA </div>
+      <div class="box box4" data-clipboard-text="#F2FBFC"> #F2FBFC </div>
+      <div class="box box5" data-clipboard-text="#Eaf4fc"> #Eaf4fc </div>
+      <div class="box box6" data-clipboard-text="#5F9F9F"> #5F9F9F </div>
+      <div class="box box7" data-clipboard-text="#507786"> #507786 </div>
+      <div class="box box8" data-clipboard-text="#E8EAF6"> #E8EAF6 </div>
+      <div class="box box9" data-clipboard-text="#ffeeee"> #ffeeee </div>
+      <div class="box box10" data-clipboard-text="#ffeef8"> #ffeef8 </div>
+      <div class="box box11" data-clipboard-text="#fbeeff"> #fbeeff </div>
+      <div class="box box12" data-clipboard-text="#eef1ff"> #eef1ff </div>
+      <div class="box box13" data-clipboard-text="#eefcff"> #eefcff </div>
+      <div class="box box14" data-clipboard-text="#eefff8"> #eefff8 </div>
+      <div class="box box15" data-clipboard-text="#eeffee"> #eeffee </div>
+      <div class="box box16" data-clipboard-text="#fcffee"> #fcffee </div>
+      <div class="box box17" data-clipboard-text="#fffaee"> #fffaee </div>
+      <div class="box box18" data-clipboard-text="#fff5ee"> #fff5ee</div>
+      <div class="box box19" data-clipboard-text="#F0FFFF"> #F0FFFF </div>
+      <div class="box box20" data-clipboard-text="#DCDCDC">#DCDCDC</div>
+      <div class="box box21" data-clipboard-text="#F8F8FF">#F8F8FF</div>
+      <div class="box box22" data-clipboard-text="#F0FFF0">#F0FFF0</div>
+      <div class="box box23" data-clipboard-text="#708090">#708090</div>
+      <div class="box box24" data-clipboard-text="#6F7285">#6F7285</div>
+      <div class="box box25" data-clipboard-text="#7A7A7A">#7A7A7A</div>
+      <div class="box box26" data-clipboard-text="#555">#555</div>
+      <div class="box box27" data-clipboard-text="#242526">#242526</div>
+      <div class="box box28" data-clipboard-text="#ccc"> #ccc </div>
+      <div class="box box29" data-clipboard-text="# ">  </div>
+      <div class="box box30" data-clipboard-text="# ">  </div>
+     
+
+
+
+
+        
+      
+      
+    </div>
+    
+      
+    
+  </section>
+
+  
+  <script src="clipboard/dist/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="main.js" type="text/javascript" charset="utf-8"></script>
+  
+      <script>
+        var mydiv = document.querySelectorAll('.box')
+      
+        var clipboard = new ClipboardJS(mydiv);
+        
+  
+        clipboard.on('success', function(e) {
+          
+          
+          console.log();
+          console.log(this)
+          
+        });
+  
+        clipboard.on('error', function(e) {
+          console.log(e);
+        });
+      </script>
+
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/dropdown.css">
+    <style>
+
+      
+
+
+
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+     .header{
+       min-height: 10vh;
+       width: 100%;
+       background: white;
+       color: red;
+       
+       
+     }
+     nav{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding:10px 30px;
+       background:white;
+       box-shadow: 0 0 20px 0 #ccc;
+       position:fixed;
+       top:0;
+       width:100%;
+     }
+     h4{
+       font-size: 20px;
+     }
+     nav h4 a{
+       color: green;
+       text-decoration: none;
+       font-weight: bold;
+     }
+     span{
+       color:red;
+     }
+    .nav-links{
+      flex: 1;
+      text-align: right;
+    }
+    ul{
+      list-style-type: none;
+    }
+    ul li{
+      display: inline-block;
+      
+    }
+    ul li a{
+      padding: 10px 5px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      color: #149074;
+    }
+    
+   .boxes{
+     background: #fff;
+     
+     
+     padding: 10%;
+     
+     
+     display:grid;
+     justify-content: center;
+     
+    grid-template-columns: 22% 22% 22% 22%;
+     grid-column-gap: 3rem;
+     grid-row-gap: 3rem;
+   }
+     .box{
+      
+      background:#fff;
+      min-height: 200px;
+      
+      border-radius: 5px;
+     flex-basis: 20%;
+     text-align: center;
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 25px;
+     font-weight: bold;
+     }
+
+     .box0{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+     .box1{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+     .box2{ box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
+     .box3{box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+     .box4{box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;}
+     .box5{box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+     .box6{box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; }
+     .box7{box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;}
+     .box8{ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;}
+     .box9{box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; }
+     .box10{box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+     .box11{box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;}
+     .box12{box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
+     .box13{box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;}
+     .box14{box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+     .box15{box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+     .box16{box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+     .box17{ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+     .box18{box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;}
+     .box19{box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;}
+     .box20{box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; }
+     .box21{box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; }
+     .box22{box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
+     .box23{ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
+     .box24{ box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; }
+     .box25{box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+     .box26{ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; }
+     .box27{ box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; }
+     .box28{box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; }
+     .box29{box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
+     .box30{ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; }
+     .box31{box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;}
+     .box32{ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;}
+     .box33{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+     .box34{ box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;}
+     .box35{box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; }
+     .box36{box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;}
+     .box37{box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+     .box38{box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+     .box39{ box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;}
+     .box40{ box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;}
+     .box41{box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;}
+     .box42{ box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; }
+     .box43{ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; }
+     .box44{ box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;}
+     .box45{ box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;}
+     .box46{box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;}
+     .box47{ box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px; }
+     .box48{ box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;}
+     .box49{ box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px; }
+     .box50{ box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; }
+     .box51{ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px; }
+     .box52{box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;}
+     .box53{box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
+     .box54{box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;}
+     .box55{box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; }
+     .box56{box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;}
+     .box57{box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;}
+     .box58{ box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;}
+     .box59{box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;}
+     .box60{box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;}
+     .box61{box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;}
+     .box62{ box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;}
+     .box63{box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; }
+     .box64{box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;}
+     .box65{ box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;}
+     .box66{box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;}
+     .box67{box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;}
+     .box68{box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;}
+     .box69{box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;}
+     .box70{box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; }
+     .box71{box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;}
+     .box72{box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;}
+     .box73{box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;}
+     .box74{box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;}
+     .box75{ box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px; }
+     .box76{box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;}
+     .box77{ box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;}
+     .box78{box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;}
+     .box79{ box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;} 
+     .box80{box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;} 
+     .box81{box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;} 
+     .box82{box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;} 
+     .box83{ box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px; } 
+     .box84{box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;} 
+     .box85{box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; } 
+     .box86{box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;} 
+     .box87{box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;} 
+     .box88{box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; } 
+     .box89{ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; } 
+     .box90{ box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset; } 
+     .box91{box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;} 
+     .box92{box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7); }
+     
+    
+   
+      
+
+     /*-------------------------
+    Large Device
+-------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.boxes{
+    grid-template-columns: 22% 22% 22% 22%;
+
+  }  
+
+}
+
+/*-------------------------
+Medium Device
+-------------------------*/
+@media (min-width: 600px) and (max-width: 991px) { 
+
+.boxes{
+    grid-template-columns: 30% 30% 30%;
+
+  }   
+
+
+}
+
+/*-------------------------
+small tab
+-------------------------*/
+@media (min-width: 600px) and (max-width: 767px) {
+
+.boxes{
+    grid-template-columns: 48% 48%;
+
+  }   
+
+}
+
+
+/*-------------------------
+Extra small Device 
+-------------------------*/
+@media (min-width:300px) and (max-width: 599px) {
+.boxes{
+  grid-template-columns: 48% 48%;
+ grid-column-gap: 2rem;
+ grid-row-gap: 2rem;
+ 
+ margin-top: 30px;
+
+
+}   
+h4{
+    font-size: 15px;
+    color: red;
+    font-weight: 700;
+}
+.box{
+    font-size: 15px;
+}
+}
+
+/*-------------------------
+Extra small Device 
+-------------------------*/
+@media (max-width: 299px) {
+.boxes{
+grid-template-columns: 95%;
+margin-top: 30px;
+
+}   
+}
+
+    </style>
+</head>
+<body onload="myfun();" >  
+  <div class="top-nav">
+            
+    <div class="dropdown" style=" margin: auto;"> 
+      <!-- button -->
+         <div class="humberger dropbtn">
+           <div class="bar"></div>
+         </div>
+         <!-- content  -->
+
+         <div class="dropdown-content">
+           <a href="lorem2.html">Home</a>
+           <a href="colors.html">Colors</a>
+           <a href="box-shadow.html">Box Shadow</a>
+           <a href="linear-color.html">Gradient</a>
+           <a href="lorem.html"> Lorem Text </a>
+           <a href="cdns.html"> cdn links </a>
+           <a href="about-us.html"> About Us</a>
+         </div>
+
+
+    </div> 
+  </div>
+    <section style="min-height:100vh;">
+       
+        <div  class="boxes">
+          <div class="box box0" data-clipboard-text="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;"> #0 </div>
+          <div class="box box1" data-clipboard-text="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"> #1 </div>
+          <div class="box box2" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;"> #2 </div>
+          <div class="box box3" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"> #3 </div>
+          <div class="box box4" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;"> #4 </div>
+          <div class="box box5" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"> #5 </div>
+          <div class="box box6" data-clipboard-text="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"> #6 </div>
+          <div class="box box7" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;"> #7 </div>
+          <div class="box box8" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"> #8 </div>
+          <div class="box box9" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;"> #9 </div>
+          <div class="box box10" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"> #10 </div>
+          <div class="box box11" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;"> #11 </div>
+          <div class="box box12" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;"> #12 </div>
+          <div class="box box13" data-clipboard-text="box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;"> #13</div>
+          <div class="box box14" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;"> #14</div>
+          <div class="box box15" data-clipboard-text="box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;"> #15</div>
+          <div class="box box16" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;"> #16 </div>
+          <div class="box box17" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;"> #17</div>
+          <div class="box box18" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"> #18 </div>
+          <div class="box box19" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"> #19 </div>
+          <div class="box box20" data-clipboard-text="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;"> #20 </div>
+          <div class="box box21" data-clipboard-text="box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;"> #21 </div>
+          <div class="box box22" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;"> #22 </div>
+          <div class="box box23" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"> #23 </div>
+          <div class="box box24" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;"> #24 </div>
+          <div class="box box25" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;"> #25 </div>
+          <div class="box box26" data-clipboard-text="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;"> #26 </div>
+          <div class="box box27" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;"> #27 </div>
+          <div class="box box28" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;"> #28 </div>
+          <div class="box box29" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"> #29 </div>
+          <div class="box box30" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;"> #30 </div>
+          <div class="box box31" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;"> #31 </div>
+          <div class="box box32" data-clipboard-text="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;"> #32 </div>
+          <div class="box box33" data-clipboard-text="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;"> #33 </div>
+          <div class="box box34" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"> #34 </div>
+          <div class="box box35" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;"> #35 </div>
+          <div class="box box36" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;"> #36 </div>
+          <div class="box box37" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;"> #37 </div>
+          <div class="box box38" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"> #38 </div>
+          <div class="box box39" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;"> #39 </div>
+          <div class="box box40" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;"> #40 </div>
+          <div class="box box41" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;"> #41 </div>
+          <div class="box box42" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;"> #42 </div>
+          <div class="box box43" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;"> #43 </div>
+          <div class="box box44" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;"> #44 </div>
+          <div class="box box45" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;"> #45 </div>
+          <div class="box box46" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;"> #46 </div>
+          <div class="box box47" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;"> #47 </div>
+          <div class="box box48" data-clipboard-text="box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;"> #48 </div>
+          <div class="box box49" data-clipboard-text="box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;"> #49 </div>
+          <div class="box box50" data-clipboard-text="box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;"> #50 </div>
+          <div class="box box51" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;"> #51 </div>
+          <div class="box box52" data-clipboard-text="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;"> #52 </div>
+          <div class="box box53" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;"> #53 </div>
+          <div class="box box54" data-clipboard-text="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;"> #54 </div>
+          <div class="box box55" data-clipboard-text="box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;"> #55 </div>
+          <div class="box box56" data-clipboard-text="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;"> #56 </div>
+          <div class="box box57" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"> #57 </div>
+          <div class="box box58" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;"> #58 </div>
+          <div class="box box59" data-clipboard-text="box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;"> #59 </div>
+          <div class="box box60" data-clipboard-text="box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;"> #60 </div>
+          <div class="box box61" data-clipboard-text="box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;"> #61 </div>
+          <div class="box box62" data-clipboard-text="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;"> #62 </div>
+          <div class="box box63" data-clipboard-text="box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;"> #63 </div>
+          <div class="box box64" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;"> #64 </div>
+          <div class="box box65" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;"> #65 </div>
+          <div class="box box66" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;"> #66 </div>
+          <div class="box box67" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;"> #67 </div>
+          <div class="box box68" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;"> #68 </div>
+          <div class="box box69" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;"> #69 </div>
+          <div class="box box70" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;"> #70 </div>
+          <div class="box box71" data-clipboard-text="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;"> #71 </div>
+          <div class="box box72" data-clipboard-text="box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;"> #72 </div>
+          <div class="box box73" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;"> #73 </div>
+          <div class="box box74" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;"> #74 </div>
+          <div class="box box75" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;"> #75 </div>
+          <div class="box box76" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;"> #76 </div>
+          <div class="box box77" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;"> #77 </div>
+          <div class="box box78" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;"> #78 </div>
+          <div class="box box79" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;"> #79 </div>
+          <div class="box box80" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;"> #80 </div>
+          <div class="box box81" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;"> #81 </div>
+          <div class="box box82" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;"> #82 </div>
+          <div class="box box83" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;"> #83 </div>
+          <div class="box box84" data-clipboard-text="box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;"> #84 </div>
+          <div class="box box85" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;"> #85 </div>
+          <div class="box box86" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;"> #86 </div>
+          <div class="box box87" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;"> #87 </div>
+          <div class="box box88" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;"> #88 </div>
+          <div class="box box89" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;"> #89 </div>
+          <div class="box box90" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;"> #90 </div>
+          <div class="box box91" data-clipboard-text="box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;"> #91 </div>
+          <div class="box box92" data-clipboard-text="box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7); "> #92 </div>
+       
+    
+    
+    
+    
+            
+          
+          
+        </div>
+        
+          
+        
+      </section> 
+
+
+      <script src="clipboard/dist/clipboard.min.js" type="text/javascript" charset="utf-8"></script> 
+      <script> 
+
+var preloader=document.getElementById("preloader")
+     function myfun(){
+       preloader.style.display="none"
+     }
+        var mydiv = document.querySelectorAll('.box')
+      
+        var clipboard = new ClipboardJS(mydiv);
+        
+  
+        clipboard.on('success', function(e) {
+          
+          
+          console.log();
+          console.log(this)
+          
+        });
+  
+        clipboard.on('error', function(e) {
+          console.log(e);
+        });
+
+
+
+        // main js 
+
+        
+var len= document.querySelectorAll('.box').length;
+for(var i=0; i<len; i++){
+ document.querySelectorAll(".box")[i].addEventListener('click',function(){
+    const my=this.innerHTML;    
+    const color=this.style.color="black"
+    
+    setTimeout(() => {
+            this.innerHTML=my;
+             this.style.color=color;
+        
+            
+            
+        }, 1000);
+        this.innerHTML="কপি হয়েছে";
+        this.style.color="red"
+        
+
+    })
+
+}
+      </script>
+</body>
+</html>

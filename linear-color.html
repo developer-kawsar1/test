@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/linear.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/dropdown.css">
+    
+  
+</head>
+
+<body>
+  <div class="top-nav">
+            
+    <div class="dropdown" style=" margin: auto;"> 
+      <!-- button -->
+         <div class="humberger dropbtn">
+           <div class="bar"></div>
+         </div>
+         <!-- content  -->
+
+         <div class="dropdown-content">
+           <a href="lorem2.html">Home</a>
+           <a href="colors.html">Colors</a>
+           <a href="box-shadow.html">Box Shadow</a>
+           <a href="linear-color.html">Gradient</a>
+           <a href="lorem.html"> Lorem Text </a>
+           <a href="cdns.html"> cdn links </a>
+           <a href="about-us.html"> About Us</a>
+         </div>
+
+
+    </div> 
+  </div>
+  <section style="min-height:100vh; margin-top: 50px;"> 
+    
+
+       
+    <div  class="boxes">
+      <div class="box box0" data-clipboard-text="background-image: linear-gradient(to right,#C9FFBF, #FFAFBD);"> #0 </div>
+      <div class="box box1" data-clipboard-text="background-image: linear-gradient(to right,#649173, #DBD5A4);"> #1 </div>
+      <div class="box box2" data-clipboard-text="background-image: linear-gradient(to right,#B993D6, #8CA6DB);"> #2 </div>
+      <div class="box box3" data-clipboard-text="background-image: linear-gradient(to right,#764BA2, #667EEA);"> #3 </div>
+      <div class="box box4" data-clipboard-text="background-image: linear-gradient(to right,#C33764, #1D2671);"> #4 </div>
+      <div class="box box5" data-clipboard-text="background-image: linear-gradient(to right,#D8B5FF, #1EAE98);"> #5 </div>
+      <div class="box box6" data-clipboard-text="background-image: linear-gradient(to right,#11998E  ,#38EF7D);"> #6 </div>
+      <div class="box box7" data-clipboard-text="background-image: linear-gradient(to right,#662D8C , #ED1E79);"> #7 </div>
+      <div class="box box8" data-clipboard-text="background-image: linear-gradient(to right,#2E3192, #1BFFFF);"> #8 </div>
+      <div class="box box9" data-clipboard-text="background-image: linear-gradient(to right,#ff9a9e , #fad0c4);"> #9 </div>
+      <div class="box box10" data-clipboard-text="background-image: linear-gradient(to right,#009245, #FCEE21);"> #10 </div>
+      <div class="box box11" data-clipboard-text="background-image: linear-gradient(to right,#FFECD2, #FCB69F);"> #11 </div>
+      <div class="box box12" data-clipboard-text="background-image: linear-gradient(to right,#09203F, #537895);"> #12 </div>
+      <div class="box box13" data-clipboard-text="background-image: linear-gradient(to right,#FC5C7D, #6A82FB);"> #13 </div>
+      <div class="box box14" data-clipboard-text="background-image: linear-gradient(to right,#23074d, #cc5333);"> #14 </div>
+      <div class="box box15" data-clipboard-text="background-image: linear-gradient(to right,#00F260, #0575E6);"> #15 </div>
+      <div class="box box16" data-clipboard-text="background-image: linear-gradient(to right,#fc4a1a, #f7b733);"> #16 </div>
+      <div class="box box17" data-clipboard-text="background-image: linear-gradient(to right,#22c1c3, #fdbb2d);"> #17 </div>
+      <div class="box box18" data-clipboard-text="background-image: linear-gradient(to right,#ff9966,#ff5e62);"> #18 </div>
+      <div class="box box19" data-clipboard-text="background-image: linear-gradient(to right,#7F00FF,#E100FF);"> #19 </div>
+      <div class="box box20" data-clipboard-text="background-image: linear-gradient(to right,#c0392b,#8e44ad);"> #20 </div>
+      <div class="box box21" data-clipboard-text="background-image: linear-gradient(to right,#007991,#78ffd6);"> #21 </div>
+      <div class="box box22" data-clipboard-text="background-image: linear-gradient(to right,#56CCF2,#2F80ED);"> #22 </div>
+      <div class="box box23" data-clipboard-text="background-image: linear-gradient(to right,#ffffff,#ff5e62);"> #23 </div>
+      <div class="box box24" data-clipboard-text="background-color: #e9bcb7;
+      background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);"> #24 </div>
+      <div class="box box25" data-clipboard-text="background-color: #90d5ec;
+      background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+      "> #25 </div>
+      <div class="box box26" data-clipboard-text="background-color: #21d190;
+      background-image: linear-gradient(315deg, #21d190 0%, #d65bca 74%);"> #26 </div>
+      <div class="box box27" data-clipboard-text="background-color: #94c997;
+      background-image: linear-gradient(315deg, #94c997 0%, #daacec 74%);"> #27</div>
+    
+ 
+
+
+
+        
+      
+      
+    </div>
+    
+      
+    
+  </section>
+ 
+  
+  <script src="clipboard/dist/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="main.js" type="text/javascript" charset="utf-8"></script>
+  
+      <script>
+        var mydiv = document.querySelectorAll('.box')
+      
+        var clipboard = new ClipboardJS(mydiv);
+        
+  
+        clipboard.on('success', function(e) {
+          
+          
+          console.log();
+          console.log(this)
+          
+        });
+  
+        clipboard.on('error', function(e) {
+          console.log(e);
+        });
+      </script>
+
+</body>
+
+</html>

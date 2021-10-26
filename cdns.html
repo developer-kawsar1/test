@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+ 
+  <link rel="stylesheet" href="prism/prim.css"/>
+    <link rel="stylesheet" href="css/dropdown.css"> 
+ <style type="text/css" media="all">
+#preloader{
+   width: 100%;
+   height: 100vh;
+
+   background: url('images/Spinner-5.gif'), #fff;
+   z-index: 9999;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: fixed;
+   top: 0;
+   
+   
+ }
+   pre{
+     width: 99%;
+     height: 50px;
+   }
+   textarea{
+     outline: none;
+     resize: none;
+     overflow: scroll;
+     padding: 10px 0px 0;
+     font-size: 15px;
+     font-weight: bold;
+     box-sizing: border-box;
+     margin: 10px;
+    text-align: left;
+     border: none;
+     border-radius: 10px;
+     margin-top: 50px;
+     width: 80%;
+     color: red;
+     
+     
+   }
+  textarea::first-word{
+    color:blue;
+    display: none;
+  }
+   textarea:focus {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn-div{
+  margin-top: 50px;
+}
+button{
+  background-image: linear-gradient(to right,#FC5C7D, #6A82FB);
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+   
+ </style>
+
+  <title>CDN</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/cdn.css">
+</head>
+
+<body onload="myfun()">
+    <div id="preloader">
+    
+  </div> 
+  <div class="top-nav">
+            
+    <div class="dropdown" style=" margin: auto;"> 
+      <!-- button -->
+         <div class="humberger dropbtn">
+           <div class="bar"></div>
+         </div>
+         <!-- content  -->
+
+         <div class="dropdown-content">
+           <a href="lorem2.html">Home</a>
+           <a href="colors.html">Colors</a>
+           <a href="box-shadow.html">Box Shadow</a>
+           <a href="linear-color.html">Gradient</a>
+           <a href="lorem.html"> Lorem Text </a>
+           <a href="cdns.html"> cdn links </a>
+           <a href="about-us.html"> About Us</a>
+         </div>
+
+
+    </div> 
+  </div>
+    
+ <section class="main" style="margin-top: 100px;">
+   <div class="containerm">
+
+   <div class="center">
+     <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type" onChange="myNewFunction(this);">
+       <option value="bootstrap-css">bootstrap.min.css</option>
+       <option value="jquery">jquery.min.js</option>
+       <option value="bootstrap-js">bootstrap.min.js</option>
+      <option value="frontawesome-css">frontawesome</option>
+       <option value="tailwind">tailwind</option>
+     </select>
+   </div>
+   
+
+    
+    
+    
+    <textarea name="" class="input" id="mytextarea" rows="8" cols="40" value="hi"></textarea>
+    <div class="btn-div">
+      <button type="submit" id="copyBtn" onclick="copyB();" data-clipboard-target="#mytextarea">Copy</button>
+    </div>
+    
+    
+    
+</div>
+ 
+ </section>
+ 
+
+ 
+
+<script src="clipboard/dist/clipboard.min.js"></script>
+
+ 
+ <script src="jquery.min.js"></script>
+  <!-- Project -->
+  <script src="cdn.js"></script>
+   <script>
+     var preloader=document.getElementById("preloader")
+     function myfun(){
+       preloader.style.display="none"
+     }
+   </script>
+ 
+</body>
+</html>

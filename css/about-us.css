@@ -1,0 +1,84 @@
+
+@font-face {
+   font-family: hind;
+   src: url(../fonts/HindSiliguri-Regular.ttf);
+ }
+ @font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+ }
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: hind;
+}
+
+.text-center{
+   text-align: center;
+}
+.col-12{
+   max-width: 600px;
+   margin:auto;
+   padding: 20px;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    
+
+    margin-top: 100px;
+  
+
+ }
+main h2{
+  position: relative;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+main h2::after{
+   position: absolute;
+   height: 3px;
+   width: 200px;
+   background-color: crimson; 
+   content: '';
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+
+
+} 
+  
+
+main img{
+   width: 130px;
+   height: 130px;
+   border: 10px solid #ccc;
+   border-radius: 50%;
+   transition: .5s; 
+   animation-name: anim;
+   animation-duration:infinite;
+   animation-timing-function: ease-in-out;
+} 
+main img:hover{
+   transform: scale(1.2);
+   filter: grayscale(200);
+}
+
+@keyframes anim{
+   0%{
+      border: 10px solid red;
+      
+   }
+   50%{
+      border: 10px solid green;
+
+   }
+   100%{
+      border: 10px solid red;
+
+   }
+}

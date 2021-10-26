@@ -1,0 +1,93 @@
+/*  humberger */
+
+
+     /*  Test div design  */ 
+
+     .bropbtn{
+
+    }
+
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+  
+     .dropdown-content{ 
+         margin-top: 10px;
+         display: none;
+         position: absolute;
+         background-color: #f1f1f1;
+         min-width: 100px;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+         z-index: 1;
+         left: 50%;
+         transform: translateX(-50%);
+         
+
+     } 
+     .dropdown-content a{
+         color: black;
+         padding: 6px 8px;
+         text-decoration: none;
+         display: block;
+         text-align: center;
+     }
+
+     .dropdown-content a:hover{
+         background-color: #ddd;
+
+     }
+     .dropdown:hover .dropdown-content{
+         display: block;
+
+     }
+
+
+
+     .humberger{
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     transform: scale(.8);
+     border: 5px solid teal;
+    } 
+    .bar{
+         width: 40px;
+         height: 3px;
+         background-color: white;
+         position: relative;
+         
+    }
+    .bar::before,
+    .bar::after{
+        width: 40px;
+         height: 3px;
+         background-color: white;
+         content: '';
+         position: absolute;
+    }
+    .bar::before{
+        bottom: 8px;
+    }
+    .bar::after{
+        top: 8px;
+    }
+
+
+
+    .top-nav{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: #eefcff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+    }
